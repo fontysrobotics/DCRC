@@ -1,0 +1,8 @@
+prefix=/home/student/catkin_ws/install
+
+Name: rviz_tools_py
+Description: Description of rviz_tools_py
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

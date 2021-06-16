@@ -1,0 +1,7 @@
+set(blackboard_SETUP_PY_SETUP_MODULE "distutils.core")
+set(blackboard_SETUP_PY_VERSION "0.0.0")
+set(blackboard_SETUP_PY_SCRIPTS "")
+set(blackboard_SETUP_PY_PACKAGES "blackboard")
+set(blackboard_SETUP_PY_PACKAGE_DIRS "src/blackboard")
+set(blackboard_SETUP_PY_MODULES "")
+set(blackboard_SETUP_PY_MODULE_DIRS "")

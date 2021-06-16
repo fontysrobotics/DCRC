@@ -1,0 +1,8 @@
+prefix=/home/student/catkin_ws/devel
+
+Name: bbinstance
+Description: Description of bbinstance
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
