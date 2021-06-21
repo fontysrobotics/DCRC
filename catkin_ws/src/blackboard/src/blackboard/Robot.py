@@ -75,6 +75,7 @@ class Robot:
         self.controller = Controller(nodeName)                                 # instance of controller class
         rospy.Subscriber('taskBC',TaskMsg,self.getTaskCost)                         # Ros subscribers
         rospy.Subscriber('taskAssign',TaskMsg,self.addTask)                         #
+        rospy.Subscriber('Emergency',String,self.emHandler)                       # 
         amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
         rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
         self.bbBackupSub = rospy.Subscriber('bbBackup',bbBackup,self.bbBackup)      #
@@ -91,6 +92,23 @@ class Robot:
         self.updateLock = Lock()        #
         self.pingLock = Lock()          #
         self.bbactiveLock = Lock()      #
+
+ # Callback triggered on '/emergencyLine' topic, stops all robots and pauses tasks
+    def emHandler(self,msg):
+        print(msg)
+        if msg == 'Stop':
+            if self.state == RobotState.busy:
+                self.controller.declareEmergency()
+                
+                #Make Robot Idle
+            else:
+                #Make Robot Idle
+        elif msg == 'Resume':
+            self.controller.endEmergency()
+            self.state = RobotState.idle
+
+        
+
 
 
     # Callback triggered on '/robotx/amcl_pose' topic updates robot amclx and amcly

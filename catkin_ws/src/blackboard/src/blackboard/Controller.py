@@ -50,6 +50,7 @@ class Controller:
         self.robotid = robotid                              # used to be passed to movebase command object
         self.mb = MoveBaseCommand(robotid)                  # init movebase command object
         self.state = 0                                      # controller state idle
+        self.emergency = 0                                  # emergency situation status / 0 means no emergency / 1 means emergency
 
 
     # starts a new thread to execute a task "movebase has blocking functions"
@@ -57,13 +58,25 @@ class Controller:
         a = Thread(target=self.executeTask, args=(task,))   # create the new thread and starts it
         a.start()
 
+    def declareEmergency(self):
+        self.emergency = 1
+        
+
+    def endEmergency(self):
+        self.emergency = 0
+    
     # called through startExecute function as a thread
     def executeTask(self, task):
+        
         self.state = -1                                     # set state to busy
         self.stepcounter = 0                                # reset step counter
         task.analyzeTask()                                  # analyze the task
         
         for step in task.stepsList:                         # send each stgep in task.stepsList as a goal
+            if self.emergency == 1:
+                task.taskState = TaskState.Assigned
+                self.state = 0
+                break
             self.mb.sendGoal(step.pose)
             wait = self.mb.client.wait_for_result()         # wait for result
             if wait:

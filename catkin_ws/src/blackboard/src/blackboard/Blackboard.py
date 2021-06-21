@@ -42,7 +42,7 @@ class Blackboard:
             rospy.Subscriber('newTask',TaskMsg,self.addTask)
             rospy.Subscriber('taskCost',TaskCost,self.processTaskCost)
             rospy.Subscriber('TaskStateMsg',TaskStateMsg,self.taskStateUpdate)
-
+            rospy.Subscriber('emergencyLine',String,self.emergency) 
             # ROS Timers invoked every rospy.Duration in seconds (duration in seconds , callback function)
             self.bbBackuptimer = rospy.Timer(rospy.Duration(1),self.bbBackup)
             self.syncTimer = rospy.Timer(rospy.Duration(2),self.bbsynch)
@@ -145,5 +145,9 @@ class Blackboard:
         bumsg.bbAdress = self.talker.nodeName       # blackboard adress
         bumsg.buAdress = self.buAdress              # backup adress 
         self.talker.pub_bbBackup.publish(bumsg)     # publish over the topic
+
+
+    def emergency(self,msg):
+        self.talker.pub_Emergency.publish(msg)
     
         

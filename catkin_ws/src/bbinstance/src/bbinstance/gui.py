@@ -22,7 +22,7 @@ class Talker(): #change to multy topic publisher
         self.nodeName = nodeName
         self.pubNewTask = rospy.Publisher('newTask', TaskMsg,queue_size=10)
         self.pubRobotState = rospy.Publisher('robotState', String,queue_size=10)
-        
+        self.pubEmergency = rospy.Publisher('emergencyLine', String,queue_size=10)
         rospy.init_node(nodeName, anonymous=False)
 
 
@@ -162,6 +162,18 @@ class Ui_MainWindow(object):
         self.btnAddTask.setEnabled(True)
         self.btnAddTask.setGeometry(QtCore.QRect(10, 240, 521, 31))
         self.btnAddTask.setObjectName("btnAddTask")
+        #Changed This
+        self.btnEmergencyStop = QtWidgets.QPushButton()
+        self.btnEmergencyStop.setEnabled(True)
+        self.btnEmergencyStop.setGeometry(QtCore.QRect(20, 240, 521, 31))
+        self.btnEmergencyStop.setObjectName("btnEmergencyStop")
+
+
+        self.btnEmergencyStopResume = QtWidgets.QPushButton()
+        self.btnEmergencyStopResume.setEnabled(True)
+        self.btnEmergencyStopResume.setGeometry(QtCore.QRect(20, 240, 521, 31))
+        self.btnEmergencyStopResume.setObjectName("btnEmergencyStop")
+        #-------
         self.widget = QtWidgets.QWidget(self.gBnewTask)
         self.widget.setGeometry(QtCore.QRect(10, 30, 521, 28))
         self.widget.setObjectName("widget")
@@ -259,6 +271,10 @@ class Ui_MainWindow(object):
         self.label_27.setText(_translate("MainWindow", "Y"))
         self.label_28.setText(_translate("MainWindow", "w"))
         self.btnAddTask.setText(_translate("MainWindow", "Add Task"))
+        #---
+        self.btnEmergencyStop.setText(_translate("MainWindow", "Emergency Stop"))
+        self.btnEmergencyStopResume.setText(_translate("MainWindow", "Resume Work"))
+        #----
         self.label_3.setText(_translate("MainWindow", "Task ID"))
         self.label_4.setText(_translate("MainWindow", "Task Priority"))
         self.label_5.setText(_translate("MainWindow", "Task Payload"))
@@ -281,7 +297,8 @@ class Ui_MainWindow(object):
         self.radioButton_3.clicked.connect(self.abActivate)
         self.radioButton_4.clicked.connect(self.abcActivate)
         self.btnAddTask.clicked.connect(self.addTaskFunction)
-
+        self.btnEmergencyStop.clicked.connect(self.emStop)
+        self.btnEmergencyStopResume.clicked.connect(self.emResume)
 
 
     def clickedPintRviz(self,data):
@@ -347,6 +364,12 @@ class Ui_MainWindow(object):
             self.lblblackBoard.setText(data.bbAdress)
             self.lblbackupBlackboard.setText(data.buAdress)
             self.lock.release()
+    
+    def emStop(self):
+        self.talker.pubEmergency.publish('Stop')
+
+    def emResume(self):
+        self.talker.pubEmergency.publish('Resume')
 
     def addTaskFunction(self,event):
         posearray = []
