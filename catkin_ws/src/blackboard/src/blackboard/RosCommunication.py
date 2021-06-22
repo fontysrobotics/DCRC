@@ -45,6 +45,7 @@ class Talker():
         self.pub_taskCost = rospy.Publisher('taskCost', TaskCost,queue_size=1)              # send task cost from robots
         self.pub_taskState = rospy.Publisher('TaskStateMsg', TaskStateMsg,queue_size=1)     # update task state in blackboare
         self.pub_Emergency = rospy.Publisher('Emergency', String,queue_size=1)              # emergency situation topic
+        self.pub_EmStop = rospy.Publisher('EmStop', String,queue_size=1)              # emergency stop topic
         rospy.init_node(nodeName, anonymous=False)                                          # initilize ROS node
 
         

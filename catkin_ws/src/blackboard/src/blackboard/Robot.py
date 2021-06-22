@@ -99,13 +99,11 @@ class Robot:
         if msg == 'Stop':
             if self.state == RobotState.busy:
                 self.controller.declareEmergency()
-                
-                #Make Robot Idle
-            else:
-                #Make Robot Idle
+            self.talker.pub_EmStop.publish("Stop")
         elif msg == 'Resume':
-            self.controller.endEmergency()
-            self.state = RobotState.idle
+            if self.state == RobotState.busy:
+                self.controller.endEmergency()
+                self.state = RobotState.idle
 
         
 
