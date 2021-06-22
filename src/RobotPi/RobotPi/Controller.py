@@ -9,10 +9,9 @@ class Controller(Node):
         super().__init__('Controller')
         self.robot = Robot()
 
-        #Subscribe via SSH //TO DO !
         self.subscriptionToEmergencyMessage = self.create_subscription(
-            String, #TO DO,
-            'topic', #TO DO,
+            String,
+            'EmStop',
             self.emergencyStop,
             10)
 
