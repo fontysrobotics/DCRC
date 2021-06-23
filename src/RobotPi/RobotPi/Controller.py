@@ -2,13 +2,19 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from .Robot import Robot
+from sensor_msgs.msg import LaserScan
 
 class Controller(Node):
 
     def __init__(self):
         super().__init__('Controller')
         self.robot = Robot()
-
+        self.lidarSubscription = self.create_subscription(
+            LaserScan,
+            '/scan',
+            self.getLidarData,
+            10
+        )
         self.subscriptionToEmergencyMessage = self.create_subscription(
             String,
             'EmStop',
@@ -16,10 +22,15 @@ class Controller(Node):
             10)
 
         self.subscriptionToEmergencyMessage  # prevent unused variable warning
+        self.lidarSubscription
 
     def emergencyStop(self, msg):
         print(msg)
         self.robot.EmergencyStop()
+
+    def getLidarData(self,data):
+        print(len(data.ranges))
+
 
 
 def main(args=None):
