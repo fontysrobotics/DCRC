@@ -46,14 +46,14 @@ class RobotState(Enum):
 
 # Start Robot class
 class Robot:
-    def __init__(self, bbAdress, backupAdress, robotId, robotType, repeatability, accuracy, payload, mxVelLinear, mxVelAngular, battery,nodeName,talker):
+    def __init__(self, bbAdress, backupAdress, robotId, robotType, repeatability, accuracy, payload, mxVelLinear, mxVelAngular, battery,nodeName,talker,colab_id):
         self.talker = talker                    # ROS publishers ande node init
         self.bb = Blackboard(0,self.talker)     # inactive instance of blackboared
         self.bbAdress = bbAdress                # blackboard adress
         self.buAdress = backupAdress            # backup adress
         self.robotId = robotId                  # robot Id
         self.robotType = robotType              # robot type , "agv , heterogenous"
-        
+        self.colab_id = colab_id
         self.repeatability = repeatability      # robot charactaristics
         self.accuracy = accuracy                #
         self.payload = payload                  #
@@ -75,7 +75,8 @@ class Robot:
         self.controller = Controller(nodeName)                                 # instance of controller class
         rospy.Subscriber('taskBC',TaskMsg,self.getTaskCost)                         # Ros subscribers
         rospy.Subscriber('taskAssign',TaskMsg,self.addTask)                         #
-        rospy.Subscriber('Emergency',String,self.emHandler)                       # 
+        rospy.Subscriber('Emergency',String,self.emHandler)                       #
+        rospy.Subscriber('taskPriority',String,self.returnPriority) 
         amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
         rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
         self.bbBackupSub = rospy.Subscriber('bbBackup',bbBackup,self.bbBackup)      #
@@ -104,6 +105,11 @@ class Robot:
             if self.state == RobotState.busy:
                 self.controller.endEmergency()
                 self.state = RobotState.idle
+
+    def returnPriority(self,msg):
+        if msg == self.colab_id:
+            temp = self.currentTaskList[self.currentTaskid].priority
+            self.talker.pub_returnPriority.publish(temp)
 
         
 

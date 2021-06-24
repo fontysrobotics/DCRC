@@ -10,7 +10,7 @@ from blackboard.Battery import Battery
 bat = Battery(100,500,100)
 
 talker = Talker('robot2')
-r = Robot('blackboard','robot1',2,2,2,2,5,10,10,bat,'robot2',talker)
+r = Robot('blackboard','robot1',2,2,2,2,5,10,10,bat,'robot2',talker,2)
 
 
 rospy.spin()

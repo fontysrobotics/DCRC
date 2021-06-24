@@ -45,7 +45,9 @@ class Talker():
         self.pub_taskCost = rospy.Publisher('taskCost', TaskCost,queue_size=1)              # send task cost from robots
         self.pub_taskState = rospy.Publisher('TaskStateMsg', TaskStateMsg,queue_size=1)     # update task state in blackboare
         self.pub_Emergency = rospy.Publisher('Emergency', String,queue_size=1)              # emergency situation topic
-        self.pub_EmStop = rospy.Publisher('EmStop', String,queue_size=1)              # emergency stop topic
+        self.pub_EmStop = rospy.Publisher('EmStop', String,queue_size=1)                    # emergency stop topic
+        self.pub_Priority = rospy.Publisher('taskPriority', String,queue_size=1)            # send msg to robotinstance to return task priority
+        self.pub_returnPriority = rospy.Publisher('returnTaskPriority', String,queue_size=1)# robotinstance returns priority to robotPI via ssh
         rospy.init_node(nodeName, anonymous=False)                                          # initilize ROS node
 
         

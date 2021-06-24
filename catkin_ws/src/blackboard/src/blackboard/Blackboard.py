@@ -42,7 +42,8 @@ class Blackboard:
             rospy.Subscriber('newTask',TaskMsg,self.addTask)
             rospy.Subscriber('taskCost',TaskCost,self.processTaskCost)
             rospy.Subscriber('TaskStateMsg',TaskStateMsg,self.taskStateUpdate)
-            rospy.Subscriber('emergencyLine',String,self.emergency) 
+            rospy.Subscriber('emergencyLine',String,self.emergency)
+            rospy.Subscriber('getPriority',String,self.getRobotPriority) 
             # ROS Timers invoked every rospy.Duration in seconds (duration in seconds , callback function)
             self.bbBackuptimer = rospy.Timer(rospy.Duration(1),self.bbBackup)
             self.syncTimer = rospy.Timer(rospy.Duration(2),self.bbsynch)
@@ -149,5 +150,7 @@ class Blackboard:
 
     def emergency(self,msg):
         self.talker.pub_Emergency.publish(msg)
-    
+
+    def getRobotPriority(self,msg):
+        self.talker.pub_Priority.publish(msg)
         
