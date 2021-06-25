@@ -9,6 +9,13 @@ class Controller(Node):
         super().__init__('Controller')
         self.robot = Robot()
 
+        self.lidarSubscription = self.create_subscription(
+            LaserScan,
+            '/scan',
+            self.getLidarData,
+            10
+        )
+        #Subscribe via SSH
         self.subscriptionToEmergencyMessage = self.create_subscription(
             String,
             'EmStop',
@@ -20,6 +27,9 @@ class Controller(Node):
     def emergencyStop(self, msg):
         print(msg)
         self.robot.EmergencyStop()
+
+    def getLidarData(self,data):
+        print(len(data.ranges))
 
 
 def main(args=None):

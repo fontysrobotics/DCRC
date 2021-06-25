@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'RobotPi'
+package_name = 'RobotPackage'
 
 setup(
     name=package_name,
@@ -14,13 +14,13 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='student',
-    maintainer_email='bozhidarbonev@gmail.com',
-    description='Robot code for driving',
+    maintainer_email='b.bonev@student.fontys.nl',
+    description='Package for robot functionality',
     license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'Controller = RobotPi.Controller:main'
+            'Controller = RobotPackage.Controller:main'
         ],
     },
 )
