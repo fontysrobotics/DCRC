@@ -66,8 +66,6 @@ def locationHandler(msg):
             # display the current AGVMap list
             if debugPrints == True: print('AGVs within', boundRange, 'meters:', AGVMap)
 
-def getAGVList():
-    return AGVMap
 
 # Handler for messages in the TASKS topic
 def tasksHandler(msg):
