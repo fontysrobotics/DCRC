@@ -10,6 +10,7 @@
 #----------------------------------------------------------------
 
 
+from typing import List
 import rospy
 from std_msgs.msg import String             # Custom built ROS messages
 from blackboard.msg import TaskMsg          #
@@ -46,8 +47,9 @@ class Talker():
         self.pub_taskState = rospy.Publisher('TaskStateMsg', TaskStateMsg,queue_size=1)     # update task state in blackboare
         self.pub_Emergency = rospy.Publisher('Emergency', String,queue_size=1)              # emergency situation topic
         self.pub_EmStop = rospy.Publisher('EmStop', String,queue_size=1)                    # emergency stop topic
-        self.pub_Priority = rospy.Publisher('taskPriority', String,queue_size=1)            # send msg to robotinstance to return task priority
-        self.pub_returnPriority = rospy.Publisher('returnTaskPriority', String,queue_size=1)# robotinstance returns priority to robotPI via ssh
+        self.pub_Priority = rospy.Publisher('taskPriority',int,queue_size=1)                # send msg to robotinstance to return task priority
+        self.pub_returnPriority = rospy.Publisher('returnTaskPriority',int,queue_size=1)    # robotinstance returns priority to robotPI via ssh
+        self.pub_execTask = rospy.Publisher('executeTask',List,queue_size=1)                 # pass goal and robot_id to robotPi to make robot go to goal
         rospy.init_node(nodeName, anonymous=False)                                          # initilize ROS node
 
         

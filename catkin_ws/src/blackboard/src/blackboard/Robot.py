@@ -76,7 +76,7 @@ class Robot:
         rospy.Subscriber('taskBC',TaskMsg,self.getTaskCost)                         # Ros subscribers
         rospy.Subscriber('taskAssign',TaskMsg,self.addTask)                         #
         rospy.Subscriber('Emergency',String,self.emHandler)                       #
-        rospy.Subscriber('taskPriority',String,self.returnPriority) 
+        rospy.Subscriber('taskPriority',int,self.returnPriority) 
         amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
         rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
         self.bbBackupSub = rospy.Subscriber('bbBackup',bbBackup,self.bbBackup)      #
