@@ -1,3 +1,4 @@
+import math
 import gpiozero
 import numpy
 from time import sleep
@@ -5,6 +6,8 @@ from time import sleep
 class Robot():
 
     def __init__(self):
+        self.robot_id = 1
+        self.emergency = False
         #RF = RightFront     
         self.motorRFin1 = gpiozero.LED(22)#27
         self.motorRFin2 = gpiozero.LED(24)#23
@@ -24,6 +27,11 @@ class Robot():
         self.motorLRin3 = gpiozero.LED(8)
         self.motorLRin4 = gpiozero.LED(9)
         self.motorLR_PWM = gpiozero.PWMLED(13)
+
+        self.Speed = 0.3
+        self.maxSpeed = 0.4
+        self.minSpeed = 0.2
+        self.locationTolerance = 0.3
 
     #GPIO and PWM for moving rightfront wheel
     def RF(self,speed):
@@ -125,7 +133,59 @@ class Robot():
 
 
     def EmergencyStop(self):
-        self.RF(0)
-        self.LF(0)
-        self.RR(0)
-        self.LR(0)
+        self.emergency = True
+        
+
+    def goToGoal(self,data,preProcessedLocation,preProcessedOrientation):
+        goalReached = False
+        Xgoal = data.x
+        Ygoal = data.y
+
+        while goalReached != True:
+            if self.emergency == True:
+                self.RF(0)
+                self.LF(0)
+                self.RR(0)
+                self.LR(0)
+                break
+            PosError = math.sqrt(math.pow((Xgoal-preProcessedLocation[0]),2) + math.pow((Ygoal-preProcessedLocation[1]),2))
+            RotError = (preProcessedOrientation/57.3) - math.atan2((Ygoal-preProcessedLocation[1]),(Xgoal-preProcessedLocation[0]))
+            angle = 0
+            if angle>3.14:
+                angle = angle-6.28
+            #elif angle <-3.14:
+            #    angle = angle+6.28
+            print(Xgoal,Ygoal,preProcessedLocation,angle,RotError,preProcessedOrientation,PosError)
+            if angle == 0:
+                self.forward(0.4)
+            if PosError < 3:
+                Speed = (((self.maxSpeed-self.minSpeed)/2.5)*PosError)+self.minSpeed
+            elif PosError >=3:
+                Speed = self.maxSpeed
+            if (angle >= -1.57 and angle < 0):
+                #print("1")
+                self.RF(Speed)
+                self.RR((numpy.cos(2*angle)*Speed))
+                self.LF((numpy.cos(2*angle)*Speed))
+                self.LR(Speed)
+            elif (angle >= -3.14 and angle < -1.57):
+                #print("2")
+                self.RF((numpy.cos(2*angle)*-Speed))
+                self.RR(-Speed)
+                self.LF(-Speed)
+                self.LR((numpy.cos(2*angle)*-Speed))
+            elif (angle > 0 and angle < 1.57):
+                #print("3")
+                self.RR(Speed)
+                self.RF((numpy.cos(2*angle)*Speed))
+                self.LR((numpy.cos(2*angle)*Speed))
+                self.LF(Speed)
+            elif (angle >= 1.57 and angle <= 3.14):
+                #print("4")
+                self.RF(-Speed)
+                self.RR((numpy.cos(2*angle)*-Speed))
+                self.LF((numpy.cos(2*angle)*-Speed))
+                self.LR(-Speed)
+            if PosError < self.locationTolerance:
+                goalReached = True
+                self.Stop(Speed,angle)
