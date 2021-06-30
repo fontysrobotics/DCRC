@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for blackboard_geneus.
 
@@ -63,10 +63,10 @@ blackboard/CMakeFiles/blackboard_geneus.dir/build: blackboard_geneus
 .PHONY : blackboard/CMakeFiles/blackboard_geneus.dir/build
 
 blackboard/CMakeFiles/blackboard_geneus.dir/clean:
-	cd /home/student/catkin_ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/blackboard_geneus.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/blackboard_geneus.dir/cmake_clean.cmake
 .PHONY : blackboard/CMakeFiles/blackboard_geneus.dir/clean
 
 blackboard/CMakeFiles/blackboard_geneus.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/blackboard /home/student/catkin_ws/build /home/student/catkin_ws/build/blackboard /home/student/catkin_ws/build/blackboard/CMakeFiles/blackboard_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/CMakeFiles/blackboard_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : blackboard/CMakeFiles/blackboard_geneus.dir/depend
 

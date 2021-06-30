@@ -1,8 +1,8 @@
-# Install script for directory: /home/student/catkin_ws/src/bbinstance
+# Install script for directory: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/bbinstance
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/student/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/student/catkin_ws/build/bbinstance/catkin_generated/safe_execute_install.cmake")
+  include("/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/bbinstance/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/catkin_ws/build/bbinstance/catkin_generated/installspace/bbinstance.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/bbinstance/catkin_generated/installspace/bbinstance.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bbinstance/cmake" TYPE FILE FILES
-    "/home/student/catkin_ws/build/bbinstance/catkin_generated/installspace/bbinstanceConfig.cmake"
-    "/home/student/catkin_ws/build/bbinstance/catkin_generated/installspace/bbinstanceConfig-version.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/bbinstance/catkin_generated/installspace/bbinstanceConfig.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/bbinstance/catkin_generated/installspace/bbinstanceConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bbinstance" TYPE FILE FILES "/home/student/catkin_ws/src/bbinstance/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bbinstance" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/bbinstance/package.xml")
 endif()
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/student/catkin_ws/src/simulation/turtlebot3_description
+# Install script for directory: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/student/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/catkin_ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_description/cmake" TYPE FILE FILES
-    "/home/student/catkin_ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_descriptionConfig.cmake"
-    "/home/student/catkin_ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_descriptionConfig-version.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_descriptionConfig.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description/catkin_generated/installspace/turtlebot3_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_description" TYPE FILE FILES "/home/student/catkin_ws/src/simulation/turtlebot3_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_description" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_description" TYPE DIRECTORY FILES
-    "/home/student/catkin_ws/src/simulation/turtlebot3_description/meshes"
-    "/home/student/catkin_ws/src/simulation/turtlebot3_description/rviz"
-    "/home/student/catkin_ws/src/simulation/turtlebot3_description/urdf"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description/meshes"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description/rviz"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description/urdf"
     )
 endif()
 

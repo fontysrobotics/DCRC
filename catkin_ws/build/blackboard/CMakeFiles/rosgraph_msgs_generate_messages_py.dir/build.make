@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build: rosgraph_msg
 .PHONY : blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 
 blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	cd /home/student/catkin_ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/blackboard /home/student/catkin_ws/build /home/student/catkin_ws/build/blackboard /home/student/catkin_ws/build/blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : blackboard/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
 

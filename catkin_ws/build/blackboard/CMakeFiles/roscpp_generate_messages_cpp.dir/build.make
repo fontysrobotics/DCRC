@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for roscpp_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/build: roscpp_generate_me
 .PHONY : blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 
 blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	cd /home/student/catkin_ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/blackboard /home/student/catkin_ws/build /home/student/catkin_ws/build/blackboard /home/student/catkin_ws/build/blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : blackboard/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 

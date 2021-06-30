@@ -1,4 +1,4 @@
-prefix=/home/student/catkin_ws/install
+prefix=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install
 
 Name: simenv
 Description: Description of simenv

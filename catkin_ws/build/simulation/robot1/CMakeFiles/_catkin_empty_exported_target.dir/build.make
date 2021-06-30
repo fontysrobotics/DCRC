@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_em
 .PHONY : simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/student/catkin_ws/build/simulation/robot1 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/robot1 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/simulation/robot1 /home/student/catkin_ws/build /home/student/catkin_ws/build/simulation/robot1 /home/student/catkin_ws/build/simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/robot1 /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/robot1 /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simulation/robot1/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

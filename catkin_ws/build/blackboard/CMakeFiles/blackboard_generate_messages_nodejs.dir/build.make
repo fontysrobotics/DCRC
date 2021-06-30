@@ -43,61 +43,61 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for blackboard_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/progress.make
 
-blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js
-blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js
-blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js
-blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js
-blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js
+blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js
+blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js
+blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js
+blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js
+blackboard/CMakeFiles/blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js
 
 
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js: /home/student/catkin_ws/src/blackboard/msg/bbBackup.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from blackboard/bbBackup.msg"
-	cd /home/student/catkin_ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/catkin_ws/src/blackboard/msg/bbBackup.msg -Iblackboard:/home/student/catkin_ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from blackboard/TaskCost.msg"
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg -Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg
 
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from blackboard/TaskMsg.msg"
-	cd /home/student/catkin_ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg -Iblackboard:/home/student/catkin_ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from blackboard/TaskStateMsg.msg"
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg -Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg
 
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js: /home/student/catkin_ws/src/blackboard/msg/TaskCost.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from blackboard/TaskCost.msg"
-	cd /home/student/catkin_ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/catkin_ws/src/blackboard/msg/TaskCost.msg -Iblackboard:/home/student/catkin_ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from blackboard/bbBackup.msg"
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg -Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg
 
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /home/student/catkin_ws/src/blackboard/msg/bbsynch.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from blackboard/bbsynch.msg"
-	cd /home/student/catkin_ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/catkin_ws/src/blackboard/msg/bbsynch.msg -Iblackboard:/home/student/catkin_ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from blackboard/TaskMsg.msg"
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg -Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg
 
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js: /home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/student/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from blackboard/TaskStateMsg.msg"
-	cd /home/student/catkin_ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg -Iblackboard:/home/student/catkin_ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg
+/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from blackboard/bbsynch.msg"
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg -Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p blackboard -o /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg
 
 blackboard_generate_messages_nodejs: blackboard/CMakeFiles/blackboard_generate_messages_nodejs
-blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js
-blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js
-blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js
-blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js
-blackboard_generate_messages_nodejs: /home/student/catkin_ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js
+blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskCost.js
+blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskStateMsg.js
+blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbBackup.js
+blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/TaskMsg.js
+blackboard_generate_messages_nodejs: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard/msg/bbsynch.js
 blackboard_generate_messages_nodejs: blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/build.make
 
 .PHONY : blackboard_generate_messages_nodejs
@@ -108,10 +108,10 @@ blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/build: blackboard_
 .PHONY : blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/build
 
 blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/clean:
-	cd /home/student/catkin_ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/blackboard_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard && $(CMAKE_COMMAND) -P CMakeFiles/blackboard_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/clean
 
 blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/blackboard /home/student/catkin_ws/build /home/student/catkin_ws/build/blackboard /home/student/catkin_ws/build/blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : blackboard/CMakeFiles/blackboard_generate_messages_nodejs.dir/depend
 

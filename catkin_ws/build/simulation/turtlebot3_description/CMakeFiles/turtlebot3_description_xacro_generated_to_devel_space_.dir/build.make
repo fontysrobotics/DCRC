@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/student/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build
 
 # Utility rule file for turtlebot3_description_xacro_generated_to_devel_space_.
 
@@ -63,10 +63,10 @@ simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_genera
 .PHONY : simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/build
 
 simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/clean:
-	cd /home/student/catkin_ws/build/simulation/turtlebot3_description && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description && $(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
 .PHONY : simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/clean
 
 simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/depend:
-	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/simulation/turtlebot3_description /home/student/catkin_ws/build /home/student/catkin_ws/build/simulation/turtlebot3_description /home/student/catkin_ws/build/simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/turtlebot3_description /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : simulation/turtlebot3_description/CMakeFiles/turtlebot3_description_xacro_generated_to_devel_space_.dir/depend
 

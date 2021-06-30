@@ -1,8 +1,8 @@
-# Install script for directory: /home/student/catkin_ws/src/blackboard
+# Install script for directory: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/student/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,67 +38,67 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/student/catkin_ws/build/blackboard/catkin_generated/safe_execute_install.cmake")
+  include("/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/msg" TYPE FILE FILES
-    "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
-    "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
-    "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
-    "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-    "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/cmake" TYPE FILE FILES "/home/student/catkin_ws/build/blackboard/catkin_generated/installspace/blackboard-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/cmake" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/installspace/blackboard-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/include/blackboard")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/include/blackboard")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/share/roseus/ros/blackboard")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/roseus/ros/blackboard")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/share/common-lisp/ros/blackboard")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/common-lisp/ros/blackboard")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/share/gennodejs/ros/blackboard")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/share/gennodejs/ros/blackboard")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/student/catkin_ws/devel/lib/python2.7/dist-packages/blackboard")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/lib/python2.7/dist-packages/blackboard")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/lib/python2.7/dist-packages/blackboard" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/lib/python2.7/dist-packages/blackboard" REGEX "/\\_\\_init\\_\\_\\.py$" EXCLUDE REGEX "/\\_\\_init\\_\\_\\.pyc$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/student/catkin_ws/devel/lib/python2.7/dist-packages/blackboard" FILES_MATCHING REGEX "/home/student/catkin_ws/devel/lib/python2.7/dist-packages/blackboard/.+/__init__.pyc?$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/lib/python2.7/dist-packages/blackboard" FILES_MATCHING REGEX "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel/lib/python2.7/dist-packages/blackboard/.+/__init__.pyc?$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/catkin_ws/build/blackboard/catkin_generated/installspace/blackboard.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/installspace/blackboard.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/cmake" TYPE FILE FILES "/home/student/catkin_ws/build/blackboard/catkin_generated/installspace/blackboard-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/cmake" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/installspace/blackboard-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard/cmake" TYPE FILE FILES
-    "/home/student/catkin_ws/build/blackboard/catkin_generated/installspace/blackboardConfig.cmake"
-    "/home/student/catkin_ws/build/blackboard/catkin_generated/installspace/blackboardConfig-version.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/installspace/blackboardConfig.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/blackboard/catkin_generated/installspace/blackboardConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard" TYPE FILE FILES "/home/student/catkin_ws/src/blackboard/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/blackboard" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/package.xml")
 endif()
 

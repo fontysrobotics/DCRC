@@ -19,8 +19,10 @@ from enum import Enum
 
 import rospy   
 import paramiko
+#import serial
+from time import sleep
 
-from geometry_msgs.msg import Pose                             # ros pose msg
+from geometry_msgs.msg import PoseStamped                             # ros pose msg
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from std_msgs.msg import Int16
 from rosnode import rosnode_ping                               # ROS node ping                  
@@ -54,6 +56,41 @@ class Robot:
         self.password = "student"
         self.port = 22
 
+        #frot tag serial config
+        """
+        self.serFront = serial.Serial()
+        self.serFront.port = '/dev/serial/by-id/usb-SEGGER_J-Link_000760116036-if00' 
+        self.serFront.baudrate = 115200
+        self.serFront.bytesize = serial.EIGHTBITS
+        self.serFront.parity = serial.PARITY_NONE
+        self.serFront.stopbits = serial.STOPBITS_ONE
+        self.serFront.timeout = 1
+        self.serFront.open()
+        self.serFront.write(b'\r\r')
+
+        #rear tag serial config
+        self.serRear = serial.Serial()
+        self.serRear.port = '/dev/serial/by-id/usb-SEGGER_J-Link_000760115163-if00' 
+        self.serRear.baudrate = 115200
+        self.serRear.bytesize = serial.EIGHTBITS
+        self.serRear.parity = serial.PARITY_NONE
+        self.serRear.stopbits = serial.STOPBITS_ONE
+        self.serRear.timeout = 1
+        self.serRear.open()
+        self.serRear.write(b'\r\r')
+
+        sleep(1)
+
+        self.serFront.close()
+        self.serRear.close()
+
+        sleep(0.5)
+
+        self.serFront.open()
+        self.serRear.open() 
+
+        """       
+
         self.talker = talker                    # ROS publishers ande node init
         self.bb = Blackboard(0,self.talker)     # inactive instance of blackboared
         self.bbAdress = bbAdress                # blackboard adress
@@ -86,12 +123,13 @@ class Robot:
         rospy.Subscriber('taskPriority',Int16,self.returnPriority) 
         #amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
         #rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
-        rospy.Subscriber('/test_pose',Pose,self.initialPose) 
+        #rospy.Subscriber('/test_pose',Pose,self.initialPose) 
         self.bbBackupSub = rospy.Subscriber('bbBackup',bbBackup,self.bbBackup)      #
 
         self.pingTimer = rospy.Timer(rospy.Duration(5),self.pingBlackboard)         # ros timers for function callback over duration
         self.bbBackupTimer = rospy.Timer(rospy.Duration(3),self.bbBackupActivate)   #
         self.exeTimer = rospy.Timer(rospy.Duration(1),self.executeTask)             #
+        self.poseTimer = rospy.Timer(rospy.Duration(1),self.readLocation)           #
 
 
         self.lock = Lock()              # Lock used to lock callback functions  
@@ -118,6 +156,44 @@ class Robot:
             self.talker.pub_returnPriority.publish(temp)
 
         
+    def readLocation(self, msg):
+        #read location data from uwb tag
+        """self.serRear.write(b'apg\n')
+        self.serRear.readline()
+        self.dataRear = str(self.serRear.readline())
+
+        self.serFront.write(b'apg\n')
+        self.serFront.readline()
+        self.dataFront = str(self.serFront.readline())
+
+        self.dataRear = self.dataRear.split(' ')
+        self.dataRear[1] = float(self.dataRear[1].replace("x:",""))
+        self.dataRear[2] = float(self.dataRear[2].replace("y:",""))
+        self.dataRear[3] = float(self.dataRear[3].replace("z:",""))
+        self.dataRear[4] = self.dataRear[4].replace("qf:","")
+        self.dataRear[4] = float(self.dataRear[4].replace("\\r\\n'",""))
+        self.dataRear.pop(0)
+
+        self.dataFront = self.dataFront.split(' ')
+        self.dataFront[1] = float(self.dataFront[1].replace("x:",""))
+        self.dataFront[2] = float(self.dataFront[2].replace("y:",""))
+        self.dataFront[3] = float(self.dataFront[3].replace("z:",""))
+        self.dataFront[4] = self.dataFront[4].replace("qf:","")
+        self.dataFront[4] = float(self.dataFront[4].replace("\\r\\n'",""))
+        self.dataFront.pop(0)
+
+        self.dataMidx = ((math.sqrt(self.dataFront[0]-self.dataRear[0])**2)/2)
+        self.dataMidy = ((math.sqrt(self.dataFront[1]-self.dataRear[1])**2)/2)
+        """
+
+        self.robotPose = PoseStamped()
+        self.robotPose.header.frame_id = self.robotId
+        self.robotPose.pose.position.x = 3.0 #self.dataMidx
+        self.robotPose.pose.position.y = 4.0 #self.dataMidy
+        print(self.robotPose)
+        self.talker.pub_robotPose.publish(self.robotPose)    # publish over topic
+
+
 
 
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/student/catkin_ws/src/simulation/simenv
+# Install script for directory: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/simenv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/student/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/catkin_ws/build/simulation/simenv/catkin_generated/installspace/simenv.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/simenv/catkin_generated/installspace/simenv.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simenv/cmake" TYPE FILE FILES
-    "/home/student/catkin_ws/build/simulation/simenv/catkin_generated/installspace/simenvConfig.cmake"
-    "/home/student/catkin_ws/build/simulation/simenv/catkin_generated/installspace/simenvConfig-version.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/simenv/catkin_generated/installspace/simenvConfig.cmake"
+    "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/build/simulation/simenv/catkin_generated/installspace/simenvConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simenv" TYPE FILE FILES "/home/student/catkin_ws/src/simulation/simenv/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simenv" TYPE FILE FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/simulation/simenv/package.xml")
 endif()
 

@@ -2,7 +2,7 @@
 
 message(STATUS "blackboard: 5 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iblackboard:/home/student/catkin_ws/src/blackboard/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iblackboard:/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,29 +17,29 @@ add_custom_target(blackboard_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" ""
 )
 
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" ""
 )
 
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" ""
 )
 
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:blackboard/TaskMsg:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
 )
 
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "blackboard" "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" "geometry_msgs/Pose:geometry_msgs/Quaternion:blackboard/TaskMsg:geometry_msgs/Point"
 )
 
 #
@@ -49,33 +49,33 @@ add_custom_target(_blackboard_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
 )
 _generate_msg_cpp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
+)
+_generate_msg_cpp(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
+)
+_generate_msg_cpp(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
 )
 _generate_msg_cpp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
   "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
-)
-_generate_msg_cpp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
-)
-_generate_msg_cpp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/blackboard
 )
 
@@ -93,15 +93,15 @@ add_custom_target(blackboard_generate_messages_cpp
 add_dependencies(blackboard_generate_messages blackboard_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_cpp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_cpp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_cpp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_cpp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_cpp _blackboard_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -114,33 +114,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS blackboard_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
 )
 _generate_msg_eus(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
+)
+_generate_msg_eus(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
+)
+_generate_msg_eus(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
 )
 _generate_msg_eus(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
   "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
-)
-_generate_msg_eus(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
-)
-_generate_msg_eus(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/blackboard
 )
 
@@ -158,15 +158,15 @@ add_custom_target(blackboard_generate_messages_eus
 add_dependencies(blackboard_generate_messages blackboard_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_eus _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_eus _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_eus _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_eus _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_eus _blackboard_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -179,33 +179,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS blackboard_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
 )
 _generate_msg_lisp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
+)
+_generate_msg_lisp(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
+)
+_generate_msg_lisp(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
 )
 _generate_msg_lisp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
   "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
-)
-_generate_msg_lisp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
-)
-_generate_msg_lisp(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/blackboard
 )
 
@@ -223,15 +223,15 @@ add_custom_target(blackboard_generate_messages_lisp
 add_dependencies(blackboard_generate_messages blackboard_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_lisp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_lisp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_lisp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_lisp _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_lisp _blackboard_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -244,33 +244,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS blackboard_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
 )
 _generate_msg_nodejs(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
+)
+_generate_msg_nodejs(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
+)
+_generate_msg_nodejs(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
 )
 _generate_msg_nodejs(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
   "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
-)
-_generate_msg_nodejs(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
-)
-_generate_msg_nodejs(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/blackboard
 )
 
@@ -288,15 +288,15 @@ add_custom_target(blackboard_generate_messages_nodejs
 add_dependencies(blackboard_generate_messages blackboard_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_nodejs _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_nodejs _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_nodejs _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_nodejs _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_nodejs _blackboard_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -309,33 +309,33 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS blackboard_generate_messages_nodejs
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
 )
 _generate_msg_py(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
+)
+_generate_msg_py(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
+)
+_generate_msg_py(blackboard
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
 )
 _generate_msg_py(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg"
+  "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg"
   "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
-)
-_generate_msg_py(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
-)
-_generate_msg_py(blackboard
-  "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/blackboard
 )
 
@@ -353,15 +353,15 @@ add_custom_target(blackboard_generate_messages_py
 add_dependencies(blackboard_generate_messages blackboard_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_py _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_py _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskCost.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_py _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_py _blackboard_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/student/catkin_ws/src/blackboard/msg/TaskStateMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg" NAME_WE)
 add_dependencies(blackboard_generate_messages_py _blackboard_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
