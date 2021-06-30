@@ -12,28 +12,23 @@
 
 from typing import List
 import rospy
-from std_msgs.msg import String             # Custom built ROS messages
+from std_msgs.msg import String             
+from std_msgs.msg import Float64MultiArray  
+from std_msgs.msg import Int16              # Custom built ROS messages
 from blackboard.msg import TaskMsg          #
 from blackboard.msg import bbBackup         #
 from blackboard.msg import TaskCost         #
 from blackboard.msg import bbsynch          #
 from blackboard.msg import TaskStateMsg     #
+
 import paramiko
 
-hostname = "192.168.1.2"
-username = "student"
-password = "student"
-port = 22
 
 
 class Talker():
     # class constructor with node name variable
     def __init__(self,nodeName):
-        self.client = paramiko.SSHClient()
-        self.client.load_system_host_keys()
-        self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy)
 
-        self.client.connect(hostname, port=port, username=username, password=password)
         # assign passed node name
         self.nodeName = nodeName
         # init publishers:
@@ -47,9 +42,9 @@ class Talker():
         self.pub_taskState = rospy.Publisher('TaskStateMsg', TaskStateMsg,queue_size=1)     # update task state in blackboare
         self.pub_Emergency = rospy.Publisher('Emergency', String,queue_size=1)              # emergency situation topic
         self.pub_EmStop = rospy.Publisher('EmStop', String,queue_size=1)                    # emergency stop topic
-        self.pub_Priority = rospy.Publisher('taskPriority',int,queue_size=1)                # send msg to robotinstance to return task priority
-        self.pub_returnPriority = rospy.Publisher('returnTaskPriority',int,queue_size=1)    # robotinstance returns priority to robotPI via ssh
-        self.pub_execTask = rospy.Publisher('executeTask',List,queue_size=1)                 # pass goal and robot_id to robotPi to make robot go to goal
+        self.pub_Priority = rospy.Publisher('taskPriority',Int16,queue_size=1)                # send msg to robotinstance to return task priority
+        self.pub_returnPriority = rospy.Publisher('returnTaskPriority',Int16,queue_size=1)    # robotinstance returns priority to robotPI via ssh
+        self.pub_execTask = rospy.Publisher('executeTask',Float64MultiArray,queue_size=1)                 # pass goal and robot_id to robotPi to make robot go to goal
         rospy.init_node(nodeName, anonymous=False)                                          # initilize ROS node
 
         

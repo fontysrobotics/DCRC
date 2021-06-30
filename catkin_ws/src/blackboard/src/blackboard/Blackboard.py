@@ -23,6 +23,7 @@ from blackboard.msg import TaskCost                #
 from blackboard.msg import bbBackup                #
 from blackboard.msg import bbsynch                 #
 from blackboard.msg import TaskStateMsg            #
+from std_msgs.msg import Int16
 
 
 #Class blackboard Start:
@@ -43,7 +44,7 @@ class Blackboard:
             rospy.Subscriber('taskCost',TaskCost,self.processTaskCost)
             rospy.Subscriber('TaskStateMsg',TaskStateMsg,self.taskStateUpdate)
             rospy.Subscriber('emergencyLine',String,self.emergency)
-            rospy.Subscriber('getPriority',int,self.getRobotPriority) 
+            rospy.Subscriber('getPriority',Int16,self.getRobotPriority) 
             # ROS Timers invoked every rospy.Duration in seconds (duration in seconds , callback function)
             self.bbBackuptimer = rospy.Timer(rospy.Duration(1),self.bbBackup)
             self.syncTimer = rospy.Timer(rospy.Duration(2),self.bbsynch)

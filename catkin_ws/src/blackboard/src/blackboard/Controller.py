@@ -15,55 +15,31 @@
 #----------------------------------------------------------------
 
 
-from blackboard.RosCommunication import Talker
+from .RosCommunication import Talker
 import rospy
+from std_msgs.msg import String
+from std_msgs.msg import Float64MultiArray
 import actionlib
-from blackboard.Task import *
-from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
+from .Task import *
 from threading import Thread
 
-# movebase command class start
-class MoveBaseCommand:
-    def __init__(self, robotid):                                # pass robot id to use in movebase topic name
-        self.robotid = robotid
-        moveBaseTopic = robotid+"/move_base"     # set movebase topic "RULE: /Robotx/move_base" x is robot id
-        self.client = actionlib.SimpleActionClient(
-            moveBaseTopic, MoveBaseAction)                      # movebase action clinet
-        self.client.wait_for_server()                           # connect to movebase server
-        self.state = 0                                          # holds movebase object state
-
-        
-    # send a goal to movebase action server
-    def sendGoal(self, goal):
-        movebasegoal = MoveBaseGoal()                                  # instance of movebase goal
-        movebasegoal.target_pose.header.frame_id = "map"               # with respect to global frame " map "
-        movebasegoal.target_pose.header.stamp = rospy.Time.now()       # time stamp, moment of sending the goal
-        movebasegoal.target_pose.pose.position.x = goal.position.x     # goal position x, passed goal
-        movebasegoal.target_pose.pose.position.y = goal.position.y     # goal position y, passed goal
-        movebasegoal.target_pose.pose.orientation.w = 1.0              
-        self.client.send_goal(movebasegoal)                            # send the goal instance
 
 # class controller start
 class Controller:
-    def __init__(self, robotid):
-        self.stepcounter = 0                                # holds the number of steps to execute
+    def __init__(self, robotid, talker):
         self.robotid = robotid                              # used to be passed to movebase command object
-        self.mb = MoveBaseCommand(robotid)                  # init movebase command object
+        self.talker = talker
         self.state = 0                                      # controller state idle
         self.emergency = 0                                  # emergency situation status / 0 means no emergency / 1 means emergency
+        rospy.Subscriber('taskFinished',String,self.finishTask)
 
 
-    # starts a new thread to execute a task "movebase has blocking functions"
-    def startExecute(self, task):
-        a = Thread(target=self.executeTask, args=(task,))   # create the new thread and starts it
-        a.start()
+    def finishTask(self,msg):
+        self.state = 1
 
-    def declareEmergency(self):
-        self.emergency = 1
+    def sendGoal(self, goal):
+        self.talker.pub_execTask.publish(goal)
         
-
-    def endEmergency(self):
-        self.emergency = 0
     
     # called through startExecute function as a thread
     def executeTask(self, task):
@@ -73,16 +49,12 @@ class Controller:
         task.analyzeTask()                                  # analyze the task
         
         for step in task.stepsList:                         # send each stgep in task.stepsList as a goal
-            if self.emergency == 1:
-                task.taskState = TaskState.Assigned
-                self.state = 0
-                break
-            self.mb.sendGoal(step.pose)
-            wait = self.mb.client.wait_for_result()         # wait for result
-            if wait:
-                self.stepcounter = self.stepcounter + 1     # if done start next increase executed steps counter
-
-        if self.stepcounter == len(task.stepsList):         # if executed steps = number of steps to be executed     
-            task.taskState = TaskState.Done                 # set task state to done
-            self.state = 1                                  # set controller state to done
+            temp = [self.robotId, step.pose.position.x,step.pose.position.y]
+            temp1 = Float64MultiArray()
+            temp1.data = temp
+            self.talker.pub_execTask.publish(temp1)
+            print(temp1)
+        while True:
+            if self.state == 1:
+                task.taskState = TaskState.Done
       

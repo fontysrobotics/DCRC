@@ -18,9 +18,11 @@ import random                                                  # for testing pur
 from enum import Enum         
 
 import rospy   
+import paramiko
 
 from geometry_msgs.msg import Pose                             # ros pose msg
 from geometry_msgs.msg import PoseWithCovarianceStamped
+from std_msgs.msg import Int16
 from rosnode import rosnode_ping                               # ROS node ping                  
 from blackboard.msg import TaskMsg                             # ROS custom msgs
 from blackboard.msg import TaskCost                            #
@@ -47,6 +49,11 @@ class RobotState(Enum):
 # Start Robot class
 class Robot:
     def __init__(self, bbAdress, backupAdress, robotId, robotType, repeatability, accuracy, payload, mxVelLinear, mxVelAngular, battery,nodeName,talker,colab_id):
+        self.hostname = "145.93.112.30"
+        self.username = "student"
+        self.password = "student"
+        self.port = 22
+
         self.talker = talker                    # ROS publishers ande node init
         self.bb = Blackboard(0,self.talker)     # inactive instance of blackboared
         self.bbAdress = bbAdress                # blackboard adress
@@ -72,13 +79,14 @@ class Robot:
         self.amcly = 0                          #
 
 
-        self.controller = Controller(nodeName)                                 # instance of controller class
+        self.controller = Controller(nodeName,self.talker)                                 # instance of controller class
         rospy.Subscriber('taskBC',TaskMsg,self.getTaskCost)                         # Ros subscribers
         rospy.Subscriber('taskAssign',TaskMsg,self.addTask)                         #
         rospy.Subscriber('Emergency',String,self.emHandler)                       #
-        rospy.Subscriber('taskPriority',int,self.returnPriority) 
-        amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
-        rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
+        rospy.Subscriber('taskPriority',Int16,self.returnPriority) 
+        #amclPose = '/'+self.nodeName+'/amcl_pose'                                    # topic name based on robot id
+        #rospy.Subscriber(amclPose,PoseWithCovarianceStamped,self.initialPose)       # 
+        rospy.Subscriber('/test_pose',Pose,self.initialPose) 
         self.bbBackupSub = rospy.Subscriber('bbBackup',bbBackup,self.bbBackup)      #
 
         self.pingTimer = rospy.Timer(rospy.Duration(5),self.pingBlackboard)         # ros timers for function callback over duration
@@ -99,12 +107,10 @@ class Robot:
         print(msg)
         if msg == 'Stop':
             if self.state == RobotState.busy:
-                self.controller.declareEmergency()
-            self.talker.pub_EmStop.publish("Stop")
+                self.talker.pub_EmStop.publish("Stop")
         elif msg == 'Resume':
             if self.state == RobotState.busy:
-                self.controller.endEmergency()
-                self.state = RobotState.idle
+                self.talker.pub_EmStop.publish("Resume")
 
     def returnPriority(self,msg):
         if msg == self.colab_id:
@@ -118,8 +124,9 @@ class Robot:
     # Callback triggered on '/robotx/amcl_pose' topic updates robot amclx and amcly
     def initialPose(self,data):
         if self.taskCostLock.locked() is False:
-            self.amclx = data.pose.pose.position.x            
-            self.amcly = data.pose.pose.position.y
+            self.amclx = data.position.x            
+            self.amcly = data.position.y
+            print(self.amclx,self.amcly)
         
   
     # Callback triggered on 'bbBackup' topic updates the current blackboard and backup adress
@@ -220,6 +227,9 @@ class Robot:
 
     # Sends the calculated cost to blackboard
     def updateBlackboard(self,robotId,taskId,taskCost,energyCost):
+        self.client = paramiko.Transport(self.hostname, self.port)
+        self.client.connect(username=self.username, password=self.password)
+        session = self.client.open_channel(kind='session')
         if self.updateLock.locked() is False:           # check lock
             self.updateLock.acquire()
             tskCst = TaskCost()                         # instance of custom ROS msg
@@ -228,6 +238,11 @@ class Robot:
             tskCst.taskCost = taskCost
             tskCst.energyCost = energyCost
             self.talker.pub_taskCost.publish(tskCst)    # publish over topic
+            cmd = "source /opt/ros/melodic/setup.bash && source ~/ros2_bridge_custom_interfaces/ros1ws/devel/setup.bash && rostopic pub taskCost blackboard/TaskCost  '{{taskId: {}, taskCost: {}, robotId: {}, energyCost: {}}}'".format(taskId,taskCost,robotId,energyCost)
+            session.exec_command(cmd)
+            session.close()
+            self.client.close()
+            print(tskCst)
             self.updateLock.release()
         
 
@@ -253,7 +268,7 @@ class Robot:
                         statemsg.taskState = 1                      # set task state to started 
                         self.currentTask.taskState = TaskState.Started
                         self.talker.pub_taskState.publish(statemsg) # update blackboard with new task state
-                        self.controller.startExecute(self.currentTask)             # call task execution on controller class
+                        self.controller.executeTask(self.currentTask)             # call task execution on controller class
 
                 if self.controller.state == 1:                      # if controller class is done
                     if self.state is RobotState.busy:                   # if the robot is idle
