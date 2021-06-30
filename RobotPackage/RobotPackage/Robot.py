@@ -132,22 +132,27 @@ class Robot():
         self.LR(0)
 
 
-    def EmergencyStop(self):
-        self.emergency = True
+    def EmergencyStop(self,msg):
+        if msg == "Stop":
+            self.emergency = True
+        elif msg == "Resume":
+            self.emergency = False
+
+        
         
 
     def goToGoal(self,data,preProcessedLocation,preProcessedOrientation):
         goalReached = False
-        Xgoal = data.x
-        Ygoal = data.y
+        Xgoal = data[0]
+        Ygoal = data[1]
 
         while goalReached != True:
-            if self.emergency == True:
+            while self.emergency == True:
                 self.RF(0)
                 self.LF(0)
                 self.RR(0)
                 self.LR(0)
-                break
+                
             PosError = math.sqrt(math.pow((Xgoal-preProcessedLocation[0]),2) + math.pow((Ygoal-preProcessedLocation[1]),2))
             RotError = (preProcessedOrientation/57.3) - math.atan2((Ygoal-preProcessedLocation[1]),(Xgoal-preProcessedLocation[0]))
             angle = 0

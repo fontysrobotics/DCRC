@@ -2,7 +2,7 @@ import time
 from typing import List
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
+from std_msgs.msg import String,Int16,Float64MultiArray
 from sensor_msgs.msg import LaserScan
 from .Robot import Robot
 from .TCPClient import TCPClient
@@ -16,9 +16,9 @@ class Controller(Node):
         self.client.connect()
         self.agvs = []
         self.priority = -999
-        self.pub_GetPriority = self.create_publisher(int, 'getPriority', 10)
+        self.pub_GetPriority = self.create_publisher(Int16, 'getPriority', 10)
         self.execTask = self.create_subscription(
-            List,
+            Float64MultiArray,
             'executeTask',
             self.CheckGoal,
             10
@@ -37,7 +37,7 @@ class Controller(Node):
             10)
 
         self.subscriptionToTaskPriority = self.create_subscription(
-            int,
+            Int16,
             'returnTaskPriority',
             self.getRobotTaskPriority,
             10)
@@ -49,7 +49,7 @@ class Controller(Node):
 
     def emergencyStop(self, msg):
         print(msg)
-        self.robot.EmergencyStop()
+        self.robot.EmergencyStop(msg)
 
     def getAGVListFromServer(self):
         self.agvs = self.client.getAgvs()
@@ -81,10 +81,11 @@ class Controller(Node):
     def getRobotTaskPriority(self,data):
         self.priority = data
 
-    def CheckGoal(self,data):
-        if data[0] == self.robot.robot_id:
+    def CheckGoal(self,msg):
+        if msg.data[0] == self.robot.robot_id:
             colabData = self.client.getPreprocessedData()
-            self.robot.goToGoal(data[1],colabData[0],colabData[1])
+            goal = [msg.data[1],msg.data[2]]
+            self.robot.goToGoal(goal,colabData[0],colabData[1])
 
 
 def main(args=None):
