@@ -185,6 +185,7 @@ class Robot:
 
         self.dataMidx = ((math.sqrt(self.dataFront[0]-self.dataRear[0])**2)/2)
         self.dataMidy = ((math.sqrt(self.dataFront[1]-self.dataRear[1])**2)/2)
+        preprocessedLocation = [dataMidx,dataMidy]
         """
 
         self.robotPose = PoseStamped()
