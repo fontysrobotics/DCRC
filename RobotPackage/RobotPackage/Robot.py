@@ -143,16 +143,21 @@ class Robot():
 
     def goToGoal(self,x,y,preProcessedLocation,preProcessedOrientation):
         goalReached = False
-        Xgoal = x
-        Ygoal = y
-
+        #Xgoal = x
+        #Ygoal = y
+        
         while goalReached != True:
             while self.emergency == True:
                 self.RF(0)
                 self.LF(0)
                 self.RR(0)
                 self.LR(0)
-                
+                print(self.motorLF_PWM.value)
+                print(self.motorRF_PWM.value)
+                print(self.motorRR_PWM.value)
+                print(self.motorLR_PWM.value)
+            print("navigating to goal")
+            """
             PosError = math.sqrt(math.pow((Xgoal-preProcessedLocation[0]),2) + math.pow((Ygoal-preProcessedLocation[1]),2))
             RotError = (preProcessedOrientation/57.3) - math.atan2((Ygoal-preProcessedLocation[1]),(Xgoal-preProcessedLocation[0]))
             angle = 0
@@ -194,3 +199,4 @@ class Robot():
             if PosError < self.locationTolerance:
                 goalReached = True
                 self.Stop(Speed,angle)
+                """

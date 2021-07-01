@@ -82,9 +82,11 @@ class Controller(Node):
         self.priority = data
 
     def CheckGoal(self,msg):
-        if msg.data[0] == self.robot.robot_id:
-            colabData = self.client.getPreprocessedData()
-            goal = [msg.data[1],msg.data[2]]
+        #if msg.data[0] == self.robot.robot_id:
+            #colabData = self.client.getPreprocessedData()
+            #goal = [msg.data[1],msg.data[2]]
+            goal = [3,3]
+            colabData = [1,2]
             self.robot.goToGoal(goal,colabData[0],colabData[1])
 
 
