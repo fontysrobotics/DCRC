@@ -40,6 +40,7 @@ from blackboard.Battery import Battery
 
 from threading import Lock,Thread                              # Python threading
 import math
+import socket
 
 
 # Robot state enums
@@ -51,7 +52,7 @@ class RobotState(Enum):
 # Start Robot class
 class Robot:
     def __init__(self, bbAdress, backupAdress, robotId, robotType, repeatability, accuracy, payload, mxVelLinear, mxVelAngular, battery,nodeName,talker,colab_id):
-        self.hostname = "145.93.112.30"
+        self.hostname = "145.93.112.43"
         self.username = "student"
         self.password = "student"
         self.port = 22
@@ -187,11 +188,22 @@ class Robot:
         """
 
         self.robotPose = PoseStamped()
-        self.robotPose.header.frame_id = self.robotId
+        self.robotPose.header.seq = self.robotId
         self.robotPose.pose.position.x = 3.0 #self.dataMidx
         self.robotPose.pose.position.y = 4.0 #self.dataMidy
         print(self.robotPose)
         self.talker.pub_robotPose.publish(self.robotPose)    # publish over topic
+
+        #self.client = paramiko.Transport(self.hostname, self.port)
+        #self.client.connect(username=self.username, password=self.password)
+        #session = self.client.open_channel(kind='session')
+
+        #cmd = "source /opt/ros/melodic/setup.bash && source ~/ros2_bridge_custom_interfaces/ros1ws/devel/setup.bash && rostopic pub robotPose geometry_msgs/PoseStamped  '{{header: {{seq: {}, stamp: {{secs: 0, nsecs: 0}}, frame_id: ' '}}, pose: {{position: {{x: {}, y: {}, z: 0}}, orientation: {{x: 0, y: 0, z: 0, w: 0}}}}'".format(self.robotId,self.robotPose.pose.position.x,self.robotPose.pose.position.y)
+        #session.exec_command(cmd)
+        #session.close()
+        #self.client.close()
+
+
 
 
 
