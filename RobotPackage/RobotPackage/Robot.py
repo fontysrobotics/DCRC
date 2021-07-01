@@ -141,10 +141,10 @@ class Robot():
         
         
 
-    def goToGoal(self,data,preProcessedLocation,preProcessedOrientation):
+    def goToGoal(self,x,y,preProcessedLocation,preProcessedOrientation):
         goalReached = False
-        Xgoal = data[0]
-        Ygoal = data[1]
+        Xgoal = x
+        Ygoal = y
 
         while goalReached != True:
             while self.emergency == True:
