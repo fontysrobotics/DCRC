@@ -1,0 +1,18 @@
+-
+  ros1_package_name: 'blackboard'
+  ros1_message_name: 'TaskMsg'
+  ros2_package_name: 'blackboard_interfaces'
+  ros2_message_name: 'TaskMsg'
+
+  fields_1_to_2:
+    taskId: 'taskid'
+    priority: 'priority'
+    taskType: 'tasktype'
+    payload: 'payload'
+    taskState: 'taskstate'
+    cost: 'cost'
+    energyCost: 'energycost'
+    robotId: 'robotid'
+    pose: 'pose'
+  
+  
