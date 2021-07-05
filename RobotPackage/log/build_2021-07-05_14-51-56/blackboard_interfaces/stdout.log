@@ -1,0 +1,13 @@
+[  3%] Built target blackboard_interfaces__cpp
+[ 13%] Built target blackboard_interfaces__rosidl_generator_c
+[ 24%] Built target blackboard_interfaces__rosidl_typesupport_introspection_cpp
+[ 34%] Built target blackboard_interfaces__rosidl_typesupport_introspection_c
+[ 44%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 55%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c
+[ 65%] Built target blackboard_interfaces__rosidl_typesupport_cpp
+[ 75%] Built target blackboard_interfaces__rosidl_typesupport_c
+[ 75%] Built target blackboard_interfaces
+[ 79%] Built target blackboard_interfaces__py
+[ 86%] Built target blackboard_interfaces__python
+[100%] Built target blackboard_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext

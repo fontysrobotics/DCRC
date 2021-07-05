@@ -1,0 +1,16 @@
+[0.192s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed
+[0.368s] running egg_info
+[0.368s] writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+[0.368s] writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+[0.369s] writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+[0.369s] writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+[0.369s] writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+[0.393s] reading manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.394s] writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.395s] running build
+[0.395s] running build_py
+[0.395s] running install
+[0.395s] running install_lib
+[0.396s] running install_data
+[0.396s] error: can't copy 'src/RobotPackage': doesn't exist or not a regular file
+[0.412s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage' returned '1': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed

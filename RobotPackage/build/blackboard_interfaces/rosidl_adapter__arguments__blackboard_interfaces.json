@@ -1,0 +1,6 @@
+{
+  "package_name": "blackboard_interfaces",
+  "non_idl_tuples": [
+    "/home/student/git_repo/DCRC/RobotPackage/src/blackboard_interfaces:msg/TaskMsg.msg"
+  ]
+}

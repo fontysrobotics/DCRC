@@ -1,0 +1,15 @@
+[0.174s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces -- -j12 -l12
+[0.219s] [  3%] Built target blackboard_interfaces__cpp
+[0.225s] [ 13%] Built target blackboard_interfaces__rosidl_generator_c
+[0.241s] [ 24%] Built target blackboard_interfaces__rosidl_typesupport_introspection_cpp
+[0.243s] [ 34%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.247s] [ 44%] Built target blackboard_interfaces__rosidl_typesupport_introspection_c
+[0.269s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_cpp
+[0.269s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c
+[0.295s] [ 75%] Built target blackboard_interfaces__rosidl_typesupport_c
+[0.312s] [ 75%] Built target blackboard_interfaces
+[0.330s] [ 79%] Built target blackboard_interfaces__py
+[0.352s] [ 86%] Built target blackboard_interfaces__python
+[0.375s] [100%] Built target blackboard_interfaces__rosidl_typesupport_c__pyext
+[0.375s] [100%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.384s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces -- -j12 -l12

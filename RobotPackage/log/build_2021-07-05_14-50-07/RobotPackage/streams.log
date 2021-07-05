@@ -1,0 +1,16 @@
+[0.190s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed
+[0.363s] running egg_info
+[0.363s] writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+[0.363s] writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+[0.364s] writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+[0.364s] writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+[0.364s] writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+[0.389s] reading manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.390s] writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.390s] running build
+[0.390s] running build_py
+[0.390s] running install
+[0.390s] running install_lib
+[0.391s] running install_data
+[0.391s] error: can't copy 'RobotPackage/src/RobotPackage': doesn't exist or not a regular file
+[0.406s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage' returned '1': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed

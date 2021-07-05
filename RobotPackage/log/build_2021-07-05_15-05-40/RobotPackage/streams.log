@@ -1,0 +1,21 @@
+[0.194s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed
+[0.365s] running egg_info
+[0.366s] writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+[0.366s] writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+[0.366s] writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+[0.366s] writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+[0.366s] writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+[0.395s] reading manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.396s] writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.396s] running build
+[0.396s] running build_py
+[0.397s] running install
+[0.397s] running install_lib
+[0.398s] running install_data
+[0.398s] copying package.xml -> /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/share/RobotPackage
+[0.398s] running install_egg_info
+[0.400s] Copying ../../build/RobotPackage/RobotPackage.egg-info to /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage-0.0.0-py3.6.egg-info
+[0.400s] running install_scripts
+[0.416s] Installing Controller script to /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/RobotPackage
+[0.416s] writing list of installed files to '/home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log'
+[0.432s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage' returned '0': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed

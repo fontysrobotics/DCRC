@@ -1,0 +1,1 @@
+Invoking command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake /home/student/git_repo/DCRC/RobotPackage/src/blackboard_interfaces -DCMAKE_INSTALL_PREFIX=/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces

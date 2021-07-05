@@ -1,0 +1,16 @@
+[0.194s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed
+[0.359s] running egg_info
+[0.359s] writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+[0.359s] writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+[0.359s] writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+[0.360s] writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+[0.360s] writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+[0.384s] reading manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.385s] writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+[0.385s] running build
+[0.385s] running build_py
+[0.385s] running install
+[0.386s] running install_lib
+[0.386s] running install_data
+[0.387s] error: can't copy 'resource/RobotPackage': doesn't exist or not a regular file
+[0.400s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/src/RobotPackage' returned '1': PYTHONPATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/RobotPackage build --build-base /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build install --prefix /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage --record /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/install.log --single-version-externally-managed

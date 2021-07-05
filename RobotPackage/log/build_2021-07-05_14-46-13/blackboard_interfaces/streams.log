@@ -1,0 +1,151 @@
+[0.013s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces -- -j12 -l12
+[0.045s] [35m[1mScanning dependencies of target blackboard_interfaces__cpp[0m
+[0.046s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.054s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.257s] [  6%] Built target blackboard_interfaces__cpp
+[0.267s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.269s] [ 13%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.272s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_generator_c[0m
+[0.287s] [ 17%] [32mBuilding C object CMakeFiles/blackboard_interfaces__rosidl_generator_c.dir/rosidl_generator_c/blackboard_interfaces/msg/task_msg__functions.c.o[0m
+[0.344s] [ 20%] [32m[1mLinking C shared library libblackboard_interfaces__rosidl_generator_c.so[0m
+[0.378s] [ 20%] Built target blackboard_interfaces__rosidl_generator_c
+[0.387s] [ 24%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.480s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_introspection_cpp[0m
+[0.488s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[0.498s] [ 27%] [32mBuilding CXX object CMakeFiles/blackboard_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/blackboard_interfaces/msg/task_msg__type_support.cpp.o[0m
+[0.507s] [ 31%] [32mBuilding CXX object CMakeFiles/blackboard_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/blackboard_interfaces/msg/dds_fastrtps/task_msg__type_support.cpp.o[0m
+[0.594s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_introspection_c[0m
+[0.607s] [ 34%] [32mBuilding C object CMakeFiles/blackboard_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/blackboard_interfaces/msg/task_msg__type_support.c.o[0m
+[0.634s] [ 37%] [32m[1mLinking C shared library libblackboard_interfaces__rosidl_typesupport_introspection_c.so[0m
+[0.668s] [ 37%] Built target blackboard_interfaces__rosidl_typesupport_introspection_c
+[0.745s] [ 41%] [32m[1mLinking CXX shared library libblackboard_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[0.803s] [ 41%] Built target blackboard_interfaces__rosidl_typesupport_introspection_cpp
+[0.835s] [ 44%] [32m[1mLinking CXX shared library libblackboard_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[0.910s] [ 44%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.920s] [ 48%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[0.920s] [ 51%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.104s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_cpp[0m
+[1.117s] [ 55%] [32mBuilding CXX object CMakeFiles/blackboard_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/blackboard_interfaces/msg/task_msg__type_support.cpp.o[0m
+[1.136s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_fastrtps_c[0m
+[1.151s] [ 58%] [32mBuilding CXX object CMakeFiles/blackboard_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/blackboard_interfaces/msg/task_msg__type_support_c.cpp.o[0m
+[1.371s] [ 62%] [32m[1mLinking CXX shared library libblackboard_interfaces__rosidl_typesupport_cpp.so[0m
+[1.380s] [ 65%] [32m[1mLinking CXX shared library libblackboard_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[1.450s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_cpp
+[1.460s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c
+[1.469s] [ 68%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.650s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_c[0m
+[1.661s] [ 72%] [32mBuilding CXX object CMakeFiles/blackboard_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/blackboard_interfaces/msg/task_msg__type_support.cpp.o[0m
+[1.684s] [ 75%] [32m[1mLinking CXX shared library libblackboard_interfaces__rosidl_typesupport_c.so[0m
+[1.734s] [ 75%] Built target blackboard_interfaces__rosidl_typesupport_c
+[1.743s] [35m[1mScanning dependencies of target blackboard_interfaces[0m
+[1.751s] [ 75%] Built target blackboard_interfaces
+[1.759s] [35m[1mScanning dependencies of target blackboard_interfaces__py[0m
+[1.769s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[2.078s] [ 79%] Built target blackboard_interfaces__py
+[2.086s] [35m[1mScanning dependencies of target blackboard_interfaces__python[0m
+[2.127s] [ 82%] [32mBuilding C object CMakeFiles/blackboard_interfaces__python.dir/rosidl_generator_py/blackboard_interfaces/msg/_task_msg_s.c.o[0m
+[2.206s] [ 86%] [32m[1mLinking C shared library rosidl_generator_py/blackboard_interfaces/libblackboard_interfaces__python.so[0m
+[2.257s] [ 86%] Built target blackboard_interfaces__python
+[2.266s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.266s] [35m[1mScanning dependencies of target blackboard_interfaces__rosidl_typesupport_c__pyext[0m
+[2.283s] [ 93%] [32mBuilding C object CMakeFiles/blackboard_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/blackboard_interfaces/_blackboard_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[2.283s] [ 93%] [32mBuilding C object CMakeFiles/blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/blackboard_interfaces/_blackboard_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.335s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so[0m
+[2.336s] [100%] [32m[1mLinking C shared library rosidl_generator_py/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so[0m
+[2.395s] [100%] Built target blackboard_interfaces__rosidl_typesupport_c__pyext
+[2.395s] [100%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.404s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces -- -j12 -l12
+[2.449s] Invoking command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces --target install -- -j12 -l12
+[2.490s] [  3%] Built target blackboard_interfaces__cpp
+[2.491s] [ 13%] Built target blackboard_interfaces__rosidl_generator_c
+[2.510s] [ 24%] Built target blackboard_interfaces__rosidl_typesupport_introspection_c
+[2.511s] [ 34%] Built target blackboard_interfaces__rosidl_typesupport_introspection_cpp
+[2.514s] [ 44%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.536s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c
+[2.536s] [ 65%] Built target blackboard_interfaces__rosidl_typesupport_cpp
+[2.558s] [ 75%] Built target blackboard_interfaces__rosidl_typesupport_c
+[2.574s] [ 75%] Built target blackboard_interfaces
+[2.591s] [ 79%] Built target blackboard_interfaces__py
+[2.613s] [ 86%] Built target blackboard_interfaces__python
+[2.638s] [ 93%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.638s] [100%] Built target blackboard_interfaces__rosidl_typesupport_c__pyext
+[2.656s] [36mInstall the project...[0m
+[2.664s] -- Install configuration: ""
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/ament_index/resource_index/rosidl_interfaces/blackboard_interfaces
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg.hpp
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__struct.hpp
+[2.665s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__traits.hpp
+[2.666s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.666s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.666s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__type_support.h
+[2.666s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/rosidl_generator_c__visibility_control.h
+[2.666s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__functions.c
+[2.666s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__struct.h
+[2.666s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__functions.h
+[2.667s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg.h
+[2.667s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/environment/library_path.sh
+[2.667s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_generator_c.so
+[2.667s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_generator_c.so" to ""
+[2.667s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_c.so
+[2.667s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_c.so" to ""
+[2.667s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_cpp.so
+[2.668s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_cpp.so" to ""
+[2.668s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.668s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.668s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__type_support.c
+[2.668s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.669s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__rosidl_typesupport_introspection_c.h
+[2.669s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_introspection_c.so
+[2.669s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[2.669s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.669s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.669s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__type_support.cpp
+[2.669s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__rosidl_typesupport_introspection_cpp.hpp
+[2.670s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_introspection_cpp.so
+[2.670s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[2.670s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.670s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.670s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.671s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__rosidl_typesupport_fastrtps_c.h
+[2.671s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_fastrtps_c.so
+[2.671s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[2.671s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces
+[2.671s] -- Up-to-date: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg
+[2.671s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/task_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[2.672s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/dds_fastrtps
+[2.672s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/include/blackboard_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.672s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[2.672s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.672s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/environment/pythonpath.sh
+[2.672s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/__init__.py
+[2.702s] Compiling '/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/__init__.py'...
+[2.705s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/msg
+[2.705s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/msg/_task_msg.py
+[2.705s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/msg/_task_msg_s.c
+[2.706s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/msg/__init__.py
+[2.706s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so
+[2.706s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[2.706s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so
+[2.707s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/python3.6/site-packages/blackboard_interfaces/blackboard_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[2.707s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__python.so
+[2.707s] -- Set runtime path of "/home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/lib/libblackboard_interfaces__python.so" to ""
+[2.707s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/msg/TaskMsg.idl
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/msg/TaskMsg.msg
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/ament_index/resource_index/package_run_dependencies/blackboard_interfaces
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/ament_index/resource_index/parent_prefix_path/blackboard_interfaces
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/environment/ament_prefix_path.sh
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/environment/path.sh
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/local_setup.bash
+[2.708s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/local_setup.sh
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/local_setup.zsh
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/ament_index/resource_index/packages/blackboard_interfaces
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/rosidl_cmake-extras.cmake
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/blackboard_interfacesConfig.cmake
+[2.709s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/cmake/blackboard_interfacesConfig-version.cmake
+[2.710s] -- Installing: /home/student/git_repo/DCRC/RobotPackage/install/blackboard_interfaces/share/blackboard_interfaces/package.xml
+[2.713s] Invoked command in '/home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces' returned '0': CMAKE_PREFIX_PATH=/home/student/git_repo/DCRC/RobotPackage/install/RobotPackage:/opt/ros/dashing /usr/bin/cmake --build /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces --target install -- -j12 -l12

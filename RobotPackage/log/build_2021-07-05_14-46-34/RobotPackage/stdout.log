@@ -1,0 +1,32 @@
+running egg_info
+writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+reading manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build
+creating /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib
+creating /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage
+copying RobotPackage/Controller.py -> /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage
+copying RobotPackage/TCPServer.py -> /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage
+copying RobotPackage/Robot.py -> /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage
+copying RobotPackage/__init__.py -> /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage
+running install
+running install_lib
+creating /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage
+copying /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage/Controller.py -> /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage
+copying /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage/TCPServer.py -> /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage
+copying /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage/Robot.py -> /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage
+copying /home/student/git_repo/DCRC/RobotPackage/build/RobotPackage/build/lib/RobotPackage/__init__.py -> /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage
+byte-compiling /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage/Controller.py to Controller.cpython-36.pyc
+byte-compiling /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage/TCPServer.py to TCPServer.cpython-36.pyc
+byte-compiling /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage/Robot.py to Robot.cpython-36.pyc
+byte-compiling /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/lib/python3.6/site-packages/RobotPackage/__init__.py to __init__.cpython-36.pyc
+running install_data
+creating /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/share/ament_index
+creating /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/share/ament_index/resource_index
+creating /home/student/git_repo/DCRC/RobotPackage/install/RobotPackage/share/ament_index/resource_index/packages

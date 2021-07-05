@@ -1,0 +1,9 @@
+running egg_info
+creating ../../build/RobotPackage/RobotPackage.egg-info
+writing ../../build/RobotPackage/RobotPackage.egg-info/PKG-INFO
+writing dependency_links to ../../build/RobotPackage/RobotPackage.egg-info/dependency_links.txt
+writing entry points to ../../build/RobotPackage/RobotPackage.egg-info/entry_points.txt
+writing requirements to ../../build/RobotPackage/RobotPackage.egg-info/requires.txt
+writing top-level names to ../../build/RobotPackage/RobotPackage.egg-info/top_level.txt
+writing manifest file '../../build/RobotPackage/RobotPackage.egg-info/SOURCES.txt'
+error: package directory 'RobotPackage' does not exist

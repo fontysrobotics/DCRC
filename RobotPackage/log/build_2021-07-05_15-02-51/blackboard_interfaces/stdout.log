@@ -1,0 +1,34 @@
+-- Found ament_cmake: 0.7.6 (/opt/ros/dashing/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found geometry_msgs: 0.7.1 (/opt/ros/dashing/share/geometry_msgs/cmake)
+-- Found rosidl_adapter: 0.7.10 (/opt/ros/dashing/share/rosidl_adapter/cmake)
+-- Found rosidl_default_generators: 0.7.0 (/opt/ros/dashing/share/rosidl_default_generators/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+-- Using single matching rosidl_typesupport_c: rosidl_typesupport_fastrtps_c
+-- Using single matching rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+-- Found python_cmake_module: 0.7.11 (/opt/ros/dashing/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.6m.so
+-- Found ament_lint_auto: 0.7.12 (/opt/ros/dashing/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/student/git_repo/DCRC/RobotPackage/build/blackboard_interfaces
+[  3%] Built target blackboard_interfaces__cpp
+[ 13%] Built target blackboard_interfaces__rosidl_generator_c
+[ 24%] Built target blackboard_interfaces__rosidl_typesupport_introspection_cpp
+[ 34%] Built target blackboard_interfaces__rosidl_typesupport_introspection_c
+[ 44%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 62%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c
+[ 65%] Built target blackboard_interfaces__rosidl_typesupport_cpp
+[ 75%] Built target blackboard_interfaces__rosidl_typesupport_c
+[ 75%] Built target blackboard_interfaces
+[ 79%] Built target blackboard_interfaces__py
+[ 86%] Built target blackboard_interfaces__python
+[ 96%] Built target blackboard_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target blackboard_interfaces__rosidl_typesupport_c__pyext

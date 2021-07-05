@@ -1,0 +1,3 @@
+[console_scripts]
+Controller = RobotPackage.Controller:main
+
