@@ -8,6 +8,7 @@ class Robot():
     def __init__(self):
         self.robot_id = 1
         self.emergency = False
+        self.goalReached = False
         #RF = RightFront     
         self.motorRFin1 = gpiozero.LED(22)#27
         self.motorRFin2 = gpiozero.LED(24)#23
@@ -142,11 +143,10 @@ class Robot():
         
 
     def goToGoal(self,x,y,preProcessedLocation,preProcessedOrientation):
-        goalReached = False
         #Xgoal = x
         #Ygoal = y
         
-        while goalReached != True:
+        while self.goalReached != True:
             while self.emergency == True:
                 self.RF(0)
                 self.LF(0)

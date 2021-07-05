@@ -14,12 +14,14 @@ class Controller(Node):
         self.robot = Robot()
         self.client = TCPClient()
         self.client.connect()
+        self.colabData = []
+        self.goal = []
         self.agvs = []
         self.priority = -999
         self.pub_GetPriority = self.create_publisher(Int16, 'getPriority', 10)
         self.execTask = self.create_subscription(
             Float64MultiArray,
-            'executeTask',
+             ,
             self.CheckGoal,
             10
         )
@@ -52,42 +54,56 @@ class Controller(Node):
         self.robot.EmergencyStop(msg)
 
     def getAGVListFromServer(self):
+        #get robots in radius from colab via tcp
         self.agvs = self.client.getAgvs()
+        #filter robots in 50cm range
         for i in range(len(self.agvs)):
             if self.agvs[i][1] >= 0.5:
                 self.agvs.pop(i)
 
     def getLidarData(self,data):
         print(len(data.ranges))
+        #filter AGVs in 50cm range from lidar data
         if data.ranges[0]<=0.5:
-            #filter AGVs in 50cm range
+            #get agvs in radius around this robot from colab
             self.getAGVListFromServer()
+            #self.agvs contains robots in 50cm range according to colab data
             for i in range(len(self.agvs)):
-                #filter AGVs in 5 degrees range
-                if self.agvs[i][3]<5:
+                #filter AGVs from colab in 5 degrees range
+                #if there is a robot that fulfulls the check then that is what the lidar detected
+                if self.agvs[i][3]>=-2.5 and self.agvs[i][3]<=2.5:
                     #stop current task to avoid crash
-                    self.robot.EmergencyStop()
-                    #get priority of tasks of both robots
+                    self.robot.EmergencyStop("Stop")
+                    #get priority of tasks of both robots and compare them
                     self.pub_GetPriority.publish(self.agvs[i][0])
-                    time.sleep(1)
                     otherRobotPr = self.priority
 
                     self.pub_GetPriority.publish(self.client.colab_id)
-                    time.sleep(1)
                     myPr = self.priority
-                    #make decision which should go and which should get out of the way
 
-
-    def getRobotTaskPriority(self,data):
-        self.priority = data
+                    if myPr > otherRobotPr:
+                        #if this robot's priority is greater then we wait for the other to get out of the way
+                        time.sleep(2)
+                        self.robot.EmergencyStop("Resume")
+                    elif myPr < otherRobotPr:
+                        #if this robot's priority is not greater then we give it an intermediate goal
+                        #in order to get it out of the way, the goal x stays the same, the goal y is increased
+                        #so the robot moves out of the way
+                        self.robot.goToGoal(self.goal[0],self.goal[1]+5,self.colabData[0],self.colabData[1])
+                        #we wait until the goal is achieved
+                        while self.robot.goalReached != True:
+                            print("getting out of the way")
+                        #after it has gotten out of the way we give it its initial goal
+                        self.robot.goToGoal(self.goal[0],self.goal[1],self.colabData[0],self.colabData[1])
 
     def CheckGoal(self,msg):
-        #if msg.data[0] == self.robot.robot_id:
-            #colabData = self.client.getPreprocessedData()
-            #goal = [msg.data[1],msg.data[2]]
-            goal = [3,3]
-            colabData = [1,2]
-            self.robot.goToGoal(goal,colabData[0],colabData[1])
+            if msg.data[0] == self.robot.robot_id:
+                self.colabData = self.client.getPreprocessedData()
+                self.goal = [msg.data[1],msg.data[2]]
+                self.robot.goToGoal(self.goal,self.colabData[0],self.colabData[1])
+                
+    def getRobotTaskPriority(self,data):
+        self.priority = data
 
 
 def main(args=None):
