@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel
+
+Name: rviz_tools_py
+Description: Description of rviz_tools_py
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

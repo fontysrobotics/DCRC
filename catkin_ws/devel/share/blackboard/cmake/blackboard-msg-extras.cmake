@@ -1,0 +1,2 @@
+set(blackboard_MESSAGE_FILES "/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskMsg.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskCost.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbBackup.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/bbsynch.msg;/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/src/blackboard/msg/TaskStateMsg.msg")
+set(blackboard_SERVICE_FILES "")

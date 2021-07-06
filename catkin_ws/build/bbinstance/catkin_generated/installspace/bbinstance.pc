@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install
+
+Name: bbinstance
+Description: Description of bbinstance
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

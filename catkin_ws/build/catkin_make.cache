@@ -1,0 +1,2 @@
+bbinstance:blackboard:simulation/robot1:simulation/rviz_tools_py-master:simulation/simenv:simulation/turtlebot3_description
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install -G Unix Makefiles

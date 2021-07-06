@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/ros2_bridge_custom_interfaces/ros1ws/install/setup.sh
